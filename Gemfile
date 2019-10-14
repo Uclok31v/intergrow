@@ -64,3 +64,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Use Slim as the template engine
 gem 'slim-rails'
 gem 'html2slim'
+
+# Use Bootstrap
+gem 'bootstrap'
