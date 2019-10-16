@@ -67,3 +67,4 @@ gem 'html2slim'
 
 # Use Bootstrap
 gem 'bootstrap'
+gem 'jquery-rails'
