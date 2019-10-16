@@ -13,6 +13,6 @@ div.container
                 td= simple_format(h(@article.comment), {}, sanitize: false, wrapper_tag: "div" )
     
     = link_to "編集", edit_article_path, class: 'btn btn-warning'
-    = link_to "削除", @article, method: :delete, data: { comfirm: "「#{@article.title}」を削除します。" }, class: 'btn btn-danger'
+    = link_to "削除", @article, method: :delete, data: { confirm: "「#{@article.title}」を削除します。" }, class: 'btn btn-danger'
     br
     = link_to "一覧へ", articles_path, class: 'btn btn-default'
