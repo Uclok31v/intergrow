@@ -1,2 +1,15 @@
-h1 Articles#show
-p Find me in app/views/articles/show.html.slim
+div.container
+    br
+    p= "#{@article.updated_at}に更新"
+    h1= @article.title
+
+    table.table.table-hover
+        tbody
+            tr
+                th= Article.human_attribute_name(:url)
+                td= link_to @article.url, @article.url, target: :_blank
+            tr
+                th= Article.human_attribute_name(:comment)
+                td= simple_format(h(@article.comment), {}, sanitize: false, wrapper_tag: "div" )
+    
+    = link_to  "一覧へ", articles_path, class: 'btn btn-default'
