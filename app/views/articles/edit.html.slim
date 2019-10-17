@@ -1,6 +1,11 @@
 div.container
     h1 投稿記事の編集
 
+    - if @article.errors.present?
+        ul#error_explanation
+            - @article.errors.full_messages.each do |message|
+                li= message
+
     = form_with model: @article, local: true do |f|
         .form-group
             = f.label :title
