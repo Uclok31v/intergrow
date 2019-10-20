@@ -14,6 +14,10 @@ html
       
         ul.navbar-nav.mr-auto
           li.nav-item= link_to 'ホーム', articles_path, class: 'nav-link'
+          li.dropdown
+            a.nav-link.dropdown-toggle data-toggle="dropdown" = 'コミュニティ'
+            div.dropdown-menu
+              a.dropdown-item= link_to 'ユーザ一覧', users_path
 
         ul.navbar-nav.ml-auto
           - if current_user
