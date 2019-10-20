@@ -1,7 +1,5 @@
 div.container
     h1 記事一覧
-
-    = link_to  "投稿する", new_article_path, class: 'btn btn-primary'
     
     .mb-3
     table.table.table-hover
@@ -14,6 +12,3 @@ div.container
                 tr
                     td= link_to  article.title, article.url, target: :_blank
                     td= link_to "詳細", article, class: 'btn btn-info mr-3'
-    
-
-    = link_to  "ユーザ登録", new_user_path, class: 'btn btn-primary'
