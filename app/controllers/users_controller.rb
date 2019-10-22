@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @articles = current_user.articles
   end
 
   def new

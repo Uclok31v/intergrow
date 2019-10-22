@@ -1,2 +1,14 @@
-h1 Users#show
-p Find me in app/views/users/show.html.slim
+div.container
+    h1= "#{current_user.name}の投稿記事"
+    
+    .mb-3
+    table.table.table-hover
+        thead.thead-default
+            tr
+                th= Article.human_attribute_name(:url)
+                th
+        tbody
+            - @articles.each do |article|
+                tr
+                    td= link_to  article.title, article.url, target: :_blank
+                    td= link_to "詳細", article, class: 'btn btn-info mr-3'
