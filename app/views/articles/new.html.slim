@@ -16,7 +16,6 @@ div.container
         .form-group
             = f.label :comment
             = f.text_area :comment, rows: 5, class: 'form-control', id: 'article_comment'
-        = f.hidden_field :count, :value => "0"
         = f.submit nil, class: 'btn btn-primary'
 
     = link_to  "一覧へ", articles_path, class: 'btn btn-default'

@@ -1,6 +1,9 @@
 div.container
     br
-    p= "#{@article.updated_at}に更新"
+    - if @article.created_at == @article.updated_at
+        p= "#{@article.created_at}に投稿"
+    - else
+        p= "#{@article.updated_at}に更新"
     h1= @article.title
 
     table.table.table-hover

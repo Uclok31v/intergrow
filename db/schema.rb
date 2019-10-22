@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_22_065705) do
+ActiveRecord::Schema.define(version: 2019_10_22_082018) do
 
   create_table "articles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title", limit: 30, null: false
     t.text "url", null: false
     t.text "comment"
-    t.integer "count"
+    t.integer "count", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id", null: false
