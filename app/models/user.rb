@@ -7,4 +7,6 @@ class User < ApplicationRecord
     end
 
     validates :email, uniqueness: true
+
+    has_many :articles
 end
