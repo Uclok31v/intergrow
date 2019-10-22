@@ -1,5 +1,7 @@
 div.container
     h1= "#{current_user.name}の投稿記事"
+
+    = link_to 'ユーザ情報を編集する', edit_user_path
     
     .mb-3
     table.table.table-hover
