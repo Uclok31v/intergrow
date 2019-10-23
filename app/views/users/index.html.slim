@@ -13,4 +13,6 @@ div.container
                 tr
                     td= user.name
                     td= user.email
-                    td= link_to "削除", user, method: :delete, data: { confirm: "「#{user.name}」を削除します。" }, class: 'btn btn-danger'
+                    td
+                        - if logged_in? && current_user.admin?
+                            = link_to "削除", user, method: :delete, data: { confirm: "「#{user.name}」を削除します。" }, class: 'btn btn-danger'
