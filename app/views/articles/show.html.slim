@@ -14,8 +14,12 @@ div.container
             tr
                 th= Article.human_attribute_name(:comment)
                 td= simple_format(h(@article.comment), {}, sanitize: false, wrapper_tag: "div" )
-    
-    = link_to "編集", edit_article_path, class: 'btn btn-warning'
-    = link_to "削除", @article, method: :delete, data: { confirm: "「#{@article.title}」を削除します。" }, class: 'btn btn-danger'
-    br
-    = link_to "一覧へ", articles_path, class: 'btn btn-default'
+
+    - if logged_in? && current_user.id == @article.user_id
+        = link_to "編集", edit_article_path, class: 'btn btn-warning'
+        = link_to "削除", @article, method: :delete, data: { confirm: "「#{@article.title}」を削除します。" }, class: 'btn btn-danger'
+        br
+        = link_to "一覧へ", current_user, class: 'btn btn-default'
+    - else
+        br
+        = link_to "一覧へ", articles_path, class: 'btn btn-default'
