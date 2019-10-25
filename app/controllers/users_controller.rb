@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @articles = current_user.articles
+    @articles = current_user.articles.order(created_at: :desc)
   end
 
   def new
