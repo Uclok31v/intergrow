@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
   def index
-    @articles = Article.all.order(created_at: :desc)
+    @q = Article.all.order(created_at: :desc).ransack(params[:q])
+    @articles = @q.result(distinct: true)
   end
 
   def show

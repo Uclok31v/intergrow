@@ -68,3 +68,6 @@ gem 'html2slim'
 # Use Bootstrap
 gem 'bootstrap'
 gem 'jquery-rails'
+
+# Use Ransack
+gem 'ransack'
