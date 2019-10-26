@@ -4,6 +4,8 @@ div.container
     = link_to 'ユーザ情報を編集する', edit_user_path
     
     .mb-3
+        = paginate @articles
+        = page_entries_info @articles
     table.table.table-hover
         thead.thead-default
             tr

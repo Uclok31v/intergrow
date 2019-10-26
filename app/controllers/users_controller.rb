@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @articles = current_user.articles.order(created_at: :desc)
+    @articles = current_user.articles.order(created_at: :desc).page(params[:page])
   end
 
   def new
