@@ -2,6 +2,8 @@ div.container
     h1 記事一覧
     
     .mb-3
+        = paginate @articles
+        = page_entries_info @articles
     table.table.table-hover
         thead.thead-default
             tr

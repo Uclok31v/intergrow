@@ -71,3 +71,6 @@ gem 'jquery-rails'
 
 # Use Ransack
 gem 'ransack'
+
+# Use kaminari
+gem 'kaminari'

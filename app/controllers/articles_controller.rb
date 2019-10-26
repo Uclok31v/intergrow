@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
   def index
     @q = Article.all.order(created_at: :desc).ransack(params[:q])
-    @articles = @q.result(distinct: true)
+    @articles = @q.result(distinct: true).page(params[:page])
   end
 
   def show
