@@ -24,6 +24,7 @@ class ArticlesController < ApplicationController
 
   def edit
     @article = Article.find(params[:id])
+    redirect_to login_url unless logged_in? && current_user.id == @article.user_id
   end
 
   def update
