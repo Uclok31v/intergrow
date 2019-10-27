@@ -1,7 +1,8 @@
 div.container
-    h1= "#{current_user.name}の投稿記事"
+    h1= "#{@user.name}の投稿記事"
 
-    = link_to 'ユーザ情報を編集する', edit_user_path
+    - if logged_in? && current_user.id == @user.id
+        = link_to 'ユーザ情報を編集する', edit_user_path
     
     .mb-3
         = paginate @articles
