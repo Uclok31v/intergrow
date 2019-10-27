@@ -6,7 +6,12 @@ class User < ApplicationRecord
         validates :email
     end
 
-    validates :email, uniqueness: true
+    with_options uniqueness: true do
+        validates :name
+        validates :email
+    end
+
+    validates :name, length: { maximum: 30 }
 
     has_many :articles
 end

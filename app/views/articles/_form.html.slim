@@ -6,10 +6,10 @@
 = form_with model: article, local: true do |f|
     .form-group
         = f.label :title
-        = f.text_field :title, class: 'form-control', id: 'article_title'
+        = f.text_field :title, class: 'form-control', id: 'article_title', required: true, maxlength: "30"
     .form-group
         = f.label :url
-        = f.text_field :url, class: 'form-control', id: 'article_url'
+        = f.text_field :url, class: 'form-control', id: 'article_url', required: true, type: "url"
     .form-group
         = f.label :comment
         = f.text_area :comment, rows: 5, class: 'form-control', id: 'article_comment'
