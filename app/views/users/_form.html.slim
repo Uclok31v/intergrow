@@ -12,8 +12,8 @@
         = f.text_field :email, class: 'form-control', required: true, type: "email"
     .form-group
         = f.label :password
-        = f.password_field :password, class: 'form-control', required: true, minlength: "8", maxlength: "16", pattern: "^[0-9a-zA-Z]+$"
+        = f.password_field :password, class: 'form-control', minlength: "8", maxlength: "16", pattern: "^[0-9a-zA-Z]+$"
     .form-group
         = f.label :password_confirmation
-        = f.password_field :password_confirmation, class: 'form-control', required: true, minlength: "8", maxlength: "16", pattern: "^[0-9a-zA-Z]+$"
+        = f.password_field :password_confirmation, class: 'form-control', minlength: "8", maxlength: "16", pattern: "^[0-9a-zA-Z]+$"
     = f.submit nil, class: 'btn btn-primary'   
