@@ -1,4 +1,4 @@
-# INTERGROW
+# Intergrow
 
 ## Overview
 This is an application for sharing learning contents.  
