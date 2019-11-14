@@ -74,3 +74,5 @@ gem 'ransack'
 
 # Use kaminari
 gem 'kaminari'
+
+gem 'pg'
