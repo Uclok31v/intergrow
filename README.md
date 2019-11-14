@@ -21,7 +21,7 @@ You can register the URI of the referenced Web pages.
 - Pagination(Using kaminari)
 
 ## Dependency
-- Ruby 2.6.2
+- Ruby 2.6.3
 - Ruby on Rails 5.2.3
 - RubyGems 3.0.3
 - Slim 4.0.1
