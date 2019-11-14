@@ -17,7 +17,10 @@ test:
   database: intergrow_test
 
 production:
-  <<: *default
+  adapter: postgresql
+  encoding: utf8
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
   database: intergrow_production
   username: intergrow
   password: <%= ENV['intergrow_PASSWORD'] %>
